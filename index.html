@@ -52,21 +52,28 @@ nextstate {
 </style>
 <html>
 <body bgcolor = "black">
+<main>
 <img id="back" />
 <current></current>
 <state></state>
 <next></next>
 <nextstate></nextstate>
 <audio id="hidden" autoplay="true" onload="report('load')" onplay="report('play')" onpause="report('pause')" onloadstart="report('buff')" onwaiting="report('buff')" onstalled="report('buff')"></audio>
+</main>
 </body>
 </html>
 <script type="text/javascript">
 nrt1 = "http://fire.wavestreamer.com:5102/Live"
 nrt1now = "NRT Radio One"
 nrt1desc = "A wide range of Christian music."
+
 fnt = "http://65.19.131.141/foxnewsradio-foxnewsaac-ibc2"
 fntnow = "Fox News Talk"
 fntdesc = "Talk radio from Fox News."
+
+cain = "http://oom-cmg.streamguys1.com/atl750/cain247im-sgplayer-aac"
+cainnow = "Herman Cain"
+caindesc = "Listen to Herman Cain 24/7."
 function isBetween(S, E) {
 	Start = S.split(":")
 	Start[0] = parseInt(Start[0])
@@ -165,17 +172,20 @@ function CheckFNT() {
 		fntdesc = "The best three hours of Brian Kilmeade."
 		}
 	}
+	
 background = audio = document.getElementsByTagName("img")
 audio = document.getElementsByTagName("audio")
 current = document.getElementsByTagName("current")
 state = document.getElementsByTagName("state")
 next = document.getElementsByTagName("next")
 nextstate = document.getElementsByTagName("nextstate")
+main = document.getElementsByTagName("main")
 State = state[0].innerHTML
 function Play(channel, url, img, desc) {
-current[0].innerHTML = channel
-audio[0].src = url;
-background[0].src = img
+	main[0].id = ""
+	current[0].innerHTML = channel
+	audio[0].src = url;
+	background[0].src = img
 }
 function report(status) {
 	if(status == "load") {
@@ -210,6 +220,11 @@ function Tune(call) {
 	if(call == "fnt") {
 		Play("<a id='link' href='javascript:Tune(\"fnt\")'>" + fntnow + "</a>", fnt, "fntback.jpg", fntdesc)
 		desc = fntdesc
+		SetNext("<a id='link' href='javascript:Tune(\"cain\")'>" + cainnow + "</a>", cain, "cainback2.jpg", caindesc)
+	}
+	if(call == "cain") {
+		Play("<a id='link' href='javascript:Tune(\"cain\")'>" + cainnow + "</a>", cain, "cainback2.jpg", caindesc)
+		desc = caindesc
 		SetNext("<a id='link' href='javascript:Tune(\"nrt1\")'>" + nrt1now + "</a>", nrt1, "nrtback.jpg", nrt1desc)
 	}
 }
