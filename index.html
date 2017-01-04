@@ -1,0 +1,80 @@
+<style type="text/css">
+current {
+	color: white;
+	font-family: Arial;
+	font-size: 6vh;
+	position: absolute;
+	bottom: 10vh;
+	left: 2vh;
+}
+state {
+	color: gray;
+	font-family: Arial;
+	font-size: 3vh;
+	position: absolute;
+	bottom: 6vh;
+	left: 2vh;
+}
+#hidden {
+	position: absolute;
+	left: 300vw;
+}
+#back {
+	position: fixed;
+	top: 0vh;
+	height: 100vh;
+	width: auto;
+}
+#a {
+	color: gray;
+	text-decoration: none;
+}
+#link {
+	color: white;
+	text-decoration: none;
+}
+</style>
+<html>
+<body bgcolor = "black">
+<img id="back" />
+<current></current>
+<state></state>
+<audio id="hidden" autoplay="true" onload="report('load')" onplay="report('play')" onpause="report('pause')"></audio>
+</body>
+</html>
+<script type="text/javascript">
+nrt1 = "http://fire.wavestreamer.com:5102/Live"
+background = audio = document.getElementsByTagName("img")
+audio = document.getElementsByTagName("audio")
+current = document.getElementsByTagName("current")
+state = document.getElementsByTagName("state")
+State = state[0].innerHTML
+function Play(channel, url, img) {
+current[0].innerHTML = channel
+audio[0].src = url;
+background[0].src = img
+}
+function report(status) {
+	if(status == "load") {
+		state[0].innerHTML = "<a id='a' href='javascript:pause()'>Loading</a>"
+	}
+	if(status == "play") {
+		state[0].innerHTML = "<a id='a' href='javascript:pause()'>Playing</a>"
+	}
+	if(status == "pause") {
+		state[0].innerHTML = "<a id='a' href='javascript:resume()'>Stopped</a>"
+	}
+}
+function pause() {
+	audio[0].pause()
+}
+function resume() {
+	audio[0].play()
+}
+function Tune(call) {
+	if(call == "nrt1") {
+		Play("<a id='link' href='javascript:Tune(\"nrt1\")'>NRT Radio One</a>", nrt1, "nrt.jpg")
+	}
+}
+Tune("nrt1")
+</script>
