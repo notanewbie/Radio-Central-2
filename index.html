@@ -88,10 +88,10 @@ function isBetween(S, E) {
 	if(Start[0] == 12 && StartM == "AM") {
 		Start[0] = 0
 	}
-	if(StartM[1] == "PM") {
+	if(Start[0] != 12 && StartM[1] == "PM") {
 		Start[0] = Start[0] + 12
 		}
-	if(EndM[1] == "PM") {
+	if(End[0] != 12 && EndM[1] == "PM") {
 		End[0] = End[0] + 12
 		}
 	//alert("Comparing " + Start[0] + " and " + hour)
