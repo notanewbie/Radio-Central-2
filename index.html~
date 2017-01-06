@@ -181,7 +181,12 @@ function CheckCAIN() {
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "6:00 PM - 9:00 PM"
 		}
-	if(isBetween("9:00 PM", "12:00 AM")) {
+	if(isBetween("9:00 PM", "11:59 PM")) {
+		cainnow = "Herman Cain"
+		caindesc = "Herman Cain brings talk radio to another level."
+		cainTime = "9:00 PM - 12:00 AM"
+		}
+	if(isBetween("11:59 PM", "11:59 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "9:00 PM - 12:00 AM"

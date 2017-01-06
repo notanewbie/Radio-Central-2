@@ -91,6 +91,7 @@ nrt1desc = "A wide range of Christian music."
 fnt = "http://65.19.131.141/foxnewsradio-foxnewsaac-ibc2"
 fntnow = "Fox News Talk"
 fntdesc = "Talk radio from Fox News."
+fntBack = "fntback.jpg"
 
 cain = "http://oom-cmg.streamguys1.com/atl750/cain247im-sgplayer-aac"
 cainnow = "Herman Cain"
@@ -380,6 +381,101 @@ function CheckFNT() {
 		fntdesc = "The news in a nutshell."
 		fntTime = "11:00 PM - 12:00 AM"
 		}
+	if(isBetween("12:00 AM", "1:00 AM") && day < 0) {
+		fntnow = "Special Report"
+		fntdesc = "Bret Baier sums up the news of the day."
+		fntTime = "12:00 AM - 1:00 AM"
+		}
+	if(isBetween("1:00 AM", "2:00 AM") && day < 0) {
+		fntnow = "Tucker Carlson Tonight"
+		fntdesc = "What the others are missing and what the media isn't telling you."
+		fntTime = "1:00 AM - 2:00 AM"
+		}
+	if(isBetween("2:00 AM", "3:00 AM") && day < 0) {
+		fntnow = "The Kelly File"
+		fntdesc = "The news in a nutshell."
+		fntTime = "2:00 AM - 3:00 AM"
+		}
+	if(isBetween("3:00 AM", "4:00 AM") && day < 0) {
+		fntnow = "Lou Dobbs Tonight"
+		fntdesc = "Commentary from Lou Dobbs."
+		fntTime = "3:00 AM - 4:00 AM"
+		}
+	if(isBetween("4:00 AM", "5:00 AM") && day < 0) {
+		fntnow = "Special Report"
+		fntdesc = "Bret Baier sums up the news of the day."
+		fntTime = "4:00 AM - 5:00 AM"
+		}
+	if(isBetween("5:00 AM", "6:00 AM") && day < 0) {
+		fntnow = "The Five"
+		fntdesc = "Five Fox News contributers give opinions on headlines."
+		fntTime = "5:00 AM - 6:00 AM"
+		}
+	if(isBetween("6:00 AM", "7:00 AM") && day < 0) {
+		fntnow = "Hannity"
+		fntdesc = "Stay politically informed with Sean Hannity."
+		fntTime = "6:00 AM - 7:00 AM"
+		}
+	if(isBetween("7:00 AM", "8:00 AM") && day < 0) {
+		fntnow = "The Kelly File"
+		fntdesc = "The news in a nutshell."
+		fntTime = "7:00 AM - 8:00 AM"
+		}
+	if(isBetween("8:00 AM", "9:00 AM") && day < 0) {
+		fntnow = "The O'Reilly Factor"
+		fntdesc = "Enter the no spin zone."
+		fntTime = "8:00 AM - 9:00 AM"
+		}
+	if(isBetween("9:00 AM", "11:00 AM") && day == 6) {
+		fntnow = "Best Of Kilmeade & Friends"
+		fntdesc = "The best two hours of Brian Kilmeade."
+		fntTime = "9:00 AM - 11:00 AM"
+		}
+	if(isBetween("11:00 AM", "1:00 PM") && day == 6) {
+		fntnow = "Todd Starnes"
+		fntdesc = "Talk radio from Fox News."
+		fntTime = "11:00 AM - 1:00 PM"
+		}
+	if(isBetween("1:00 PM", "3:00 PM") && day == 6) {
+		fntnow = "Best of John Gibson"
+		fntdesc = "Best of the John Gibson Show."
+		fntTime = "1:00 PM - 3:00 PM"
+		}
+	if(isBetween("3:00 PM", "5:00 PM") && day == 6) {
+		fntnow = "Tom Sullivan Rerun"
+		fntdesc = "Catch some of the Tom Sullivan you missed."
+		fntTime = "3:00 PM - 5:00 PM"
+		}
+	if(isBetween("5:00 PM", "7:00 PM") && day == 6) {
+		fntnow = "Best of Alan Colmes Show"
+		fntdesc = "The best two hours of Alan Colmes."
+		fntTime = "5:00 PM - 7:00 PM"
+		}
+	if(isBetween("8:00 PM", "9:00 PM") && day == 6) {
+		fntnow = "Watters' World"
+		fntdesc = "Jesse Watters talks to the man on the street."
+		fntTime = "8:00 PM - 9:00 PM"
+		}
+	if(isBetween("9:00 PM", "10:00 PM") && day == 6) {
+		fntnow = "Fox News Sunday"
+		fntdesc = "Chris Wallace breaks down political news."
+		fntTime = "9:00 PM - 10:00 PM"
+		}
+	if(isBetween("10:00 PM", "11:00 PM") && day == 6) {
+		fntnow = "America's News HQ"
+		fntdesc = "News coverage from the Fox News Channel."
+		fntTime = "10:00 PM - 11:00 PM"
+		}
+	if(isBetween("11:00 PM", "11:59 PM") && day == 6) {
+		fntnow = "Fox Business Network"
+		fntdesc = "News from the Fox Business Network."
+		fntTime = "11:00 PM - 12:00 AM"
+		}
+	if(isBetween("11:59 PM", "11:59 PM") && day == 6) {
+		fntnow = "Fox Business Network"
+		fntdesc = "News from the Fox Business Network."
+		fntTime = "11:00 PM - 12:00 AM"
+		}
 	if(call == "fnt") {
 		current[0].innerHTML = fntnow
 		sample = state[0].innerHTML.split("</a>")
@@ -394,6 +490,9 @@ function CheckFNT() {
 		if(timeTag[0].innerHTML != fntTime) {
 			timeTag[0].innerHTML = fntTime
 		}
+		if(nextTime[0].innerHTML != cainTime) {
+			nextTime[0].innerHTML = cainTime
+		}
 	}
 	if(call == "cain") {
 		current[0].innerHTML = cainnow
@@ -405,13 +504,23 @@ function CheckFNT() {
 		if(timeTag[0].innerHTML != cainTime) {
 			timeTag[0].innerHTML = cainTime
 		}
+		if(nextTime[0].innerHTML != "12:00 AM to 12:00 AM") {
+			nextTime[0].innerHTML = "12:00 AM to 12:00 AM"
+		}
 	}
 	if(call == "nrt1") {
-		current[0].innerHTML = nrtnnow
+		current[0].innerHTML = nrt1now
 		sample = state[0].innerHTML.split("</a>")
-		state[0].innerHTML = sample[0] + nrtdesc
-		//background[0].src = img
-		timeTag[0].innerHTML = nrtTime
+		if(sample[1] != nrt1desc) {
+			state[0].innerHTML = sample[0] + nrt1desc
+			//background[0].src = img
+		}
+		if(timeTag[0].innerHTML != "12:00 AM to 12:00 AM") {
+			timeTag[0].innerHTML = "12:00 AM to 12:00 AM"
+		}
+		if(nextTime[0].innerHTML != fntTime) {
+			nextTime[0].innerHTML = fntTime
+		}
 	}
 	}
 background = audio = document.getElementsByTagName("img")
