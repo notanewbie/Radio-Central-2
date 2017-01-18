@@ -1,9 +1,47 @@
 <style type="text/css">
+#flote {
+	position: fixed;
+	background-color: black;
+	z-index: 10;
+	left: 0px;
+}
+#logo {
+	max-height: 12vh;
+}
+#td3 {
+	border-bottom: solid 1px;
+	border-color: gray;
+	width: 66vw;
+}
+#th {
+	min-width: 70vw;
+}
+td {
+	min-height: 12vh;
+	}
+table {
+	text-align: left;
+	table-layout: fixed;
+	font-family: Arial;
+	color: white;
+	position: absolute;
+	z-index: 5;
+	left: 15vw;
+	top: 20vh;
+}
+bigText1 {
+	color: white;
+	position: fixed;
+	left: 15vw;
+	top: 10vh;
+	font-family: Arial;
+	z-index: 5;
+}
 current {
 	color: white;
 	font-family: Arial;
 	font-size: 6vh;
-	position: absolute;
+	position: fixed;
 	bottom: 10vh;
 	left: 2vw;
 }
@@ -11,7 +49,7 @@ state {
 	color: gray;
 	font-family: Arial;
 	font-size: 3vh;
-	position: absolute;
+	position: fixed;
 	bottom: 6vh;
 	left: 2vw;
 }
@@ -19,7 +57,7 @@ time {
 	color: gray;
 	font-family: Arial;
 	font-size: 3vh;
-	position: absolute;
+	position: fixed;
 	bottom: 17vh;
 	left: 2vw;
 }
@@ -27,7 +65,7 @@ next {
 	color: white;
 	font-family: Arial;
 	font-size: 6vh;
-	position: absolute;
+	position: fixed;
 	bottom: 10vh;
 	left: 65vw;
 }
@@ -35,7 +73,7 @@ nextstate {
 	color: gray;
 	font-family: Arial;
 	font-size: 3vh;
-	position: absolute;
+	position: fixed;
 	bottom: 6vh;
 	left: 65vw;
 }
@@ -43,7 +81,7 @@ nexttime {
 	color: gray;
 	font-family: Arial;
 	font-size: 3vh;
-	position: absolute;
+	position: fixed;
 	bottom: 17vh;
 	left: 65vw;
 }
@@ -59,6 +97,10 @@ nexttime {
 }
 #a {
 	color: gray;
+	text-decoration: none;
+}
+#a2 {
+	color: white;
 	text-decoration: none;
 }
 #link {
@@ -79,9 +121,364 @@ nexttime {
 <nextstate></nextstate>
 <audio id="hidden" autoplay="true" onload="report('load')" onplay="report('play')" onpause="report('pause')" onloadstart="report('buff')" onwaiting="report('buff')" onstalled="report('buff')"></audio>
 </main>
+<top>
+<bigText1><h1><a href="javascript:toggleGuide()" id="a2">Guide</a></h1></bigText1>
+</top>
+<guide style="visibility: hidden;">
+<table id="flote">
+<th style="visibility:hidden;"><br />Channel</th>
+<th style="visibility:hidden;"><br />Channel</th>
+<th style="visibility:hidden;"><br />Chann</th>
+<th id="fixed1" colspan="3"><br />Channel</th>
+</table>
+<table>
+<tr>
+<th style="visibility: hidden;"><br />Channel</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Sunday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Monday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Tuesday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Wednesday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Thurdsay</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Friday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+<th id="th"><font family="Arial" style="font-weight: lighter;">Saturday</font><br />Midnight</th>
+<th id="th"><br />12:30 AM</th>
+<th id="th"><br />1:00 AM</th>
+<th id="th"><br />1:30 AM</th>
+<th id="th"><br />2:00 AM</th>
+<th id="th"><br />2:30 AM</th>
+<th id="th"><br />3:00 AM</th>
+<th id="th"><br />3:30 AM</th>
+<th id="th"><br />4:00 AM</th>
+<th id="th"><br />4:30 AM</th>
+<th id="th"><br />5:00 AM</th>
+<th id="th"><br />5:30 AM</th>
+<th id="th"><br />6:00 AM</th>
+<th id="th"><br />6:30 AM</th>
+<th id="th"><br />7:00 AM</th>
+<th id="th"><br />7:30 AM</th>
+<th id="th"><br />8:00 AM</th>
+<th id="th"><br />8:30 AM</th>
+<th id="th"><br />9:00 AM</th>
+<th id="th"><br />9:30 AM</th>
+<th id="th"><br />10:00 AM</th>
+<th id="th"><br />10:30 AM</th>
+<th id="th"><br />11:00 AM</th>
+<th id="th"><br />11:30 AM</th>
+<th id="th"><br />12:00 PM</th>
+<th id="th"><br />12:30 PM</th>
+<th id="th"><br />1:00 PM</th>
+<th id="th"><br />1:30 PM</th>
+<th id="th"><br />2:00 PM</th>
+<th id="th"><br />2:30 PM</th>
+<th id="th"><br />3:00 PM</th>
+<th id="th"><br />3:30 PM</th>
+<th id="th"><br />4:00 PM</th>
+<th id="th"><br />4:30 PM</th>
+<th id="th"><br />5:00 PM</th>
+<th id="th"><br />5:30 PM</th>
+<th id="th"><br />6:00 PM</th>
+<th id="th"><br />6:30 PM</th>
+<th id="th"><br />7:00 PM</th>
+<th id="th"><br />7:30 PM</th>
+<th id="th"><br />8:00 PM</th>
+<th id="th"><br />8:30 PM</th>
+<th id="th"><br />9:00 PM</th>
+<th id="th"><br />9:30 PM</th>
+<th id="th"><br />10:00 PM</th>
+<th id="th"><br />10:30 PM</th>
+<th id="th"><br />11:00 PM</th>
+<th id="th"><br />11:30 PM</th>
+</tr>
+<tr>
+</table>
+</guide>
 </body>
 </html>
 <script type="text/javascript">
+nowshown = "Play"
+
 call = "n/a"
 
 nrt1 = "http://fire.wavestreamer.com:5102/Live"
@@ -145,53 +542,82 @@ function UpdateTime() {
 	CheckCAIN()
 	}
 setInterval(function(){ UpdateTime() }, 1000);
+firstrunCAIN = 0
 UpdateTime()
 function CheckCAIN() {
 	if(isBetween("12:00 AM", "3:00 AM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "12:00 AM - 3:00 AM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("3:00 AM", "6:00 AM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "3:00 AM - 6:00 AM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("6:00 AM", "9:00 AM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "6:00 AM - 9:00 AM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("9:00 AM", "12:00 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings common sense to talk radio."
 		cainTime = "9:00 AM - 12:00 PM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("12:00 PM", "3:00 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "12:00 PM - 3:00 PM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("3:00 PM", "6:00 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "3:00 PM - 6:00 PM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("6:00 PM", "9:00 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "6:00 PM - 9:00 PM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("9:00 PM", "11:59 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "9:00 PM - 12:00 AM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
+		}
 		}
 	if(isBetween("11:59 PM", "11:59 PM")) {
 		cainnow = "Herman Cain"
 		caindesc = "Herman Cain brings talk radio to another level."
 		cainTime = "9:00 PM - 12:00 AM"
+		if(firstrunCAIN == 0) {
+			addShow("Herman Cain", 300)
 		}
+		}
+	firstrunCAIN = 1
 }
 
 function CheckFNT() {
@@ -253,7 +679,7 @@ function CheckFNT() {
 		}
 	if(isBetween("8:00 AM", "9:00 AM") && day == 0) {
 		fntnow = "Kennedy"
-		fntdesc = "sharp commentary on today's hottest issues."
+		fntdesc = "Sharp commentary on today's hottest issues."
 		fntTime = "8:00 AM - 9:00 AM"
 		}
 	if(isBetween("9:00 AM", "12:00 PM") && day == 0) {
@@ -581,5 +1007,57 @@ function Tune(kall) {
 		SetNext("<a id='link' href='javascript:Tune(\"nrt1\")'>" + nrt1now + "</a>", nrt1, "nrtback.jpg", nrt1desc)
 	}
 }
+main = document.getElementsByTagName("main")
+guide = document.getElementsByTagName("guide")
+function showGuide() {
+	main[0].style.visibility = "hidden"
+	guide[0].style.visibility = "visible"
+	nowshown = "Guide"
+	//alert("Oh!")
+}
+function showPlay() {
+	main[0].style.visibility = "visible"
+	guide[0].style.visibility = "hidden"
+	nowshown = "Play"
+	//alert("Oh.")
+}
+function toggleGuide() {
+	justset = 0
+	if(nowshown == "Play" && justset == 0) {
+		//alert("Gah!")
+		showGuide()
+		justset = 1
+	}
+	else if(nowshown == "Guide" && justset == 0) {
+		//alert("Gah.")
+		showPlay()
+		justset = 1
+	}
+}
 Tune("nrt1")
+guide = document.getElementsByTagName("guide")
+table = document.getElementsByTagName("table")
+intext = '"nrt1"'
+table[0].innerHTML = table[0].innerHTML + "<tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='nrt1logo.png'></img></td>"
+table[1].innerHTML = table[1].innerHTML + "<tr><td style='visibility: hidden;'><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='nrt1logo.png'></img></td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune(" + intext + ")'>NRT Radio One<br />A wide range of Christian music.</td></tr>"
+intext = '"fnt"'
+table[0].innerHTML = table[0].innerHTML + "<tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='fntlogo.png'></img></td>"
+table[1].innerHTML = table[1].innerHTML + "<tr><td style='visibility: hidden;'><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='fntlogo.png'></img></td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>FOX Report<br />Shepard Smith recaps the news.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Watters' World<br />Jesse Watters talks to the man on the street.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Justice<br />Jeanine Pirro examines the news.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>America's News HQ<br />News coverage from the Fox News Channel.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>FOX Report<br />Shepard Smith recaps the news.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Bulls & Bears<br />Analysts from FBN discuss the markets.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Cavuto on Business<br />Neil Cavuto analyzes the markets.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Forbes on FOX<br />David Asman presents business news.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Cashin' In<br />Get the most out of your money.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Willis Report<br />Gerri Willis brings you money news.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Kennedy<br />Sharp commentary on today's hottest issues.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Best Of Kilmeade & Friends<br />The best three hours of Brian Kilmeade.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Fox News Talk<br />Talk radio from Fox News.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Fox News Sunday<br />Chris Wallace breaks down political news.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Best of John Gibson<br />Best of the John Gibson Show.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Fox News Sunday<br />Chris Wallace breaks down political news.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Best of Tom Sullivan Show<br />Chris Wallace breaks down political news.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Best of Alan Colmes Show<br />The best three hours of Alan Colmes.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Best of Alan Colmes Show<br />The best three hours of Alan Colmes.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Tom Sullivan on Fox Business<br />Tom Sullivan on Fox Business.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Lou Dobbs Tonight<br />Commentary from Lou Dobbs.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Greg Gutfeld Show<br />Greg Gutfeld acts silly.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Fox Report Sunday<br />Shepard Smith recaps the news.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Fox Report Sunday<br />Shepard Smith recaps the news.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Greg Gutfeld Show<br />Greg Gutfeld acts silly.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Bulls & Bears<br />Analysts from FBN discuss the markets.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Cavuto on Business<br />Neil Cavuto analyzes the markets.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Forbes on FOX<br />David Asman presents business news.</td><td id='td3' colspan='1'><a id='a2' href='javascript:Tune(" + intext + ")'>Cashin' In<br />Get the most out of your money.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Kilmeade & Friends<br />Brian Kilmeade and his friends discuss politics.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>John Gibson Show<br />John Gibson talks about politics.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Tom Sullivan Show<br />Tom Sullivan bring politics with a twist.</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Alan Colmes Show<br />Wrap up the day informed with Alan Colmes.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The O'Reilly Factor<br />Enter the no spin zone.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The Five<br />Five Fox News contributors give opinions on headlines.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The Kelly File<br />The news in a nutshell.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Special Report<br />Bret Baier sums up the news of the day.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Tucker Carlson Tonight<br />What the others are missing and what the media isn't telling you.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The Kelly File<br />The news in a nutshell.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Lou Dobbs Tonight<br />Commentary from Lou Dobbs.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Special Report<br />Bret Baier sums up the news of the day.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The Five<br />Five Fox News contributers give opinions on headlines.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>Hannity<br />Stay politically informed with Sean Hannity.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The Kelly File<br />The news in a nutshell.</td><td id='td3' colspan='2'><a id='a2' href='javascript:Tune(" + intext + ")'>The O'Reilly Factor<br />Enter the no spin zone.</td></tr>"
+intext = '"cain"'
+table[0].innerHTML = table[0].innerHTML + "<tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='cainlogo.png'></img></td>"
+table[1].innerHTML = table[1].innerHTML + "<tr><td style='visibility: hidden;'><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='cainlogo.png'></img></td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a>" + "<td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td><td id='td3' colspan='6'><a id='a2' href='javascript:Tune(" + intext + ")'>Herman Cain<br />Herman Cain brings talk radio to another level</td></a></td></tr>"
+function addShow(name, length) {
+	table = document.getElementsByTagName("table")
+	if(length == 100) {
+		length = "210%"
+		hourlength = "1"
+	}
+	if(length == 300) {
+		length = "630%"
+		hourlength = "3"
+	}
+	hourlength2 = parseInt(hourlength) * 2
+	//table[0].innerHTML = table[0].innerHTML + "<td id='td" + hourlength + "'colspan='" + hourlength2 + "'>" + name + "</td>"
+	//alert(table[0].innerHTML)
+}
 </script>
