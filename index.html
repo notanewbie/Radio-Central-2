@@ -1,4 +1,24 @@
 <style type="text/css">
+#leftarrow {
+	position: fixed;
+	left: 30vw;
+	top: 15vh;
+	height: 3vw;
+}
+#rightarrow {
+	position: fixed;
+	right: 5vw;
+	top: 15vh;
+	height: 3vw;
+}
+.scroller {
+  
+  scroll-snap-type: mandatory;
+
+  /* older spec implementation */
+  scroll-snap-destination: 0% 100%;
+  scroll-snap-points-x: repeat(100%);
+}
 #guide {
 	position: absolute;
 }
@@ -46,6 +66,7 @@
 }
 #th {
 	min-width: 70vw;
+	
 }
 td {
 	min-height: 12vh;
@@ -156,6 +177,8 @@ nexttime {
 <bigText1><h1><a href="javascript:toggleGuide()" id="a2">Guide</a></h1></bigText1>
 </top>
 <guide style="visibility: hidden;">
+<div id="leftarrow"><a href="javascript:left()"><img src="arrow.png" id="leftarrow"></a></img></div>
+<div id="rightarrow"><a href="javascript:right()"><img src="rightarrow.png" id="rightarrow"></a></img></div>
 <table id="flote">
 <th style="visibility:hidden;"><br />Channel</th>
 <th style="visibility:hidden;"><br />Channel</th>
@@ -165,342 +188,342 @@ nexttime {
 <table id="hideguide">
 <tr>
 <th style="visibility: hidden;"><br />Channel</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Sunday">Sunday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Monday">Monday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Tuesday">Tuesday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Wednesday">Wednesday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Thursday">Thurdsay</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Friday">Friday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
-<th id="th"><font family="Arial" style="font-weight: lighter;"><div id="Saturday">Saturday</div></font><br />Midnight</th>
-<th id="th"><br />12:30 AM</th>
-<th id="th"><br />1:00 AM</th>
-<th id="th"><br />1:30 AM</th>
-<th id="th"><br />2:00 AM</th>
-<th id="th"><br />2:30 AM</th>
-<th id="th"><br />3:00 AM</th>
-<th id="th"><br />3:30 AM</th>
-<th id="th"><br />4:00 AM</th>
-<th id="th"><br />4:30 AM</th>
-<th id="th"><br />5:00 AM</th>
-<th id="th"><br />5:30 AM</th>
-<th id="th"><br />6:00 AM</th>
-<th id="th"><br />6:30 AM</th>
-<th id="th"><br />7:00 AM</th>
-<th id="th"><br />7:30 AM</th>
-<th id="th"><br />8:00 AM</th>
-<th id="th"><br />8:30 AM</th>
-<th id="th"><br />9:00 AM</th>
-<th id="th"><br />9:30 AM</th>
-<th id="th"><br />10:00 AM</th>
-<th id="th"><br />10:30 AM</th>
-<th id="th"><br />11:00 AM</th>
-<th id="th"><br />11:30 AM</th>
-<th id="th"><br />12:00 PM</th>
-<th id="th"><br />12:30 PM</th>
-<th id="th"><br />1:00 PM</th>
-<th id="th"><br />1:30 PM</th>
-<th id="th"><br />2:00 PM</th>
-<th id="th"><br />2:30 PM</th>
-<th id="th"><br />3:00 PM</th>
-<th id="th"><br />3:30 PM</th>
-<th id="th"><br />4:00 PM</th>
-<th id="th"><br />4:30 PM</th>
-<th id="th"><br />5:00 PM</th>
-<th id="th"><br />5:30 PM</th>
-<th id="th"><br />6:00 PM</th>
-<th id="th"><br />6:30 PM</th>
-<th id="th"><br />7:00 PM</th>
-<th id="th"><br />7:30 PM</th>
-<th id="th"><br />8:00 PM</th>
-<th id="th"><br />8:30 PM</th>
-<th id="th"><br />9:00 PM</th>
-<th id="th"><br />9:30 PM</th>
-<th id="th"><br />10:00 PM</th>
-<th id="th"><br />10:30 PM</th>
-<th id="th"><br />11:00 PM</th>
-<th id="th"><br />11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Sunday">Sunday</div></font><br />Midnight</th>
+<th id="th" ><br />12:30 AM</th>
+<th id="th" ><br />1:00 AM</th>
+<th id="th" ><br />1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Monday">Monday</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Tuesday">Tuesday</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Wednesday">Wednesday</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Thursday">Thurdsay</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Friday">Friday</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
+<th id="th" font family="Arial" style="font-weight: lighter;"><div id="Saturday">Saturday</div></font><br />Midnight</th>
+<th id="th" >12:30 AM</th>
+<th id="th" >1:00 AM</th>
+<th id="th" >1:30 AM</th>
+<th id="th" >2:00 AM</th>
+<th id="th" >2:30 AM</th>
+<th id="th" >3:00 AM</th>
+<th id="th" >3:30 AM</th>
+<th id="th" >4:00 AM</th>
+<th id="th" >4:30 AM</th>
+<th id="th" >5:00 AM</th>
+<th id="th" >5:30 AM</th>
+<th id="th" >6:00 AM</th>
+<th id="th" >6:30 AM</th>
+<th id="th" >7:00 AM</th>
+<th id="th" >7:30 AM</th>
+<th id="th" >8:00 AM</th>
+<th id="th" >8:30 AM</th>
+<th id="th" >9:00 AM</th>
+<th id="th" >9:30 AM</th>
+<th id="th" >10:00 AM</th>
+<th id="th" >10:30 AM</th>
+<th id="th" >11:00 AM</th>
+<th id="th" >11:30 AM</th>
+<th id="th" >12:00 PM</th>
+<th id="th" >12:30 PM</th>
+<th id="th" >1:00 PM</th>
+<th id="th" >1:30 PM</th>
+<th id="th" >2:00 PM</th>
+<th id="th" >2:30 PM</th>
+<th id="th" >3:00 PM</th>
+<th id="th" >3:30 PM</th>
+<th id="th" >4:00 PM</th>
+<th id="th" >4:30 PM</th>
+<th id="th" >5:00 PM</th>
+<th id="th" >5:30 PM</th>
+<th id="th" >6:00 PM</th>
+<th id="th" >6:30 PM</th>
+<th id="th" >7:00 PM</th>
+<th id="th" >7:30 PM</th>
+<th id="th" >8:00 PM</th>
+<th id="th" >8:30 PM</th>
+<th id="th" >9:00 PM</th>
+<th id="th" >9:30 PM</th>
+<th id="th" >10:00 PM</th>
+<th id="th" >10:30 PM</th>
+<th id="th" >11:00 PM</th>
+<th id="th" >11:30 PM</th>
 </tr>
 <tr><td style='visibility: hidden;'><a id='a2' href='javascript:Tune("nrt1")'><img id='logo' src='nrt1logo.png'></img></td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td><td id='td3' colspan='48'><a id='a2' href='javascript:Tune("nrt1")'>NRT Radio One<br />A wide range of Christian music.</td></tr>
 <tr><td style='visibility: hidden;'><a id='a2' href='javascript:Tune(" + intext + ")'><img id='logo' src='cainlogo.png'></img></td>
@@ -1298,5 +1321,27 @@ function addShow(name, length) {
 	hourlength2 = parseInt(hourlength) * 2
 	//table[0].innerHTML = table[0].innerHTML + "<td id='td" + hourlength + "'colspan='" + hourlength2 + "'>" + name + "</td>"
 	//alert(table[0].innerHTML)
+}
+function left() {
+	pageXOffset = window.pageXOffset;
+	innerWidth = window.innerWidth;
+	twenty = innerWidth * .7;
+	if(pageXOffset > twenty) {
+		window.scrollBy(twenty * -1, 0)
+	}
+	else {
+		window.scrollTo(0, 0)
+	}
+}
+function right() {
+	pageXOffset = window.pageXOffset;
+	innerWidth = window.innerWidth;
+	twenty = innerWidth * .7;
+	if(pageXOffset > twenty) {
+		window.scrollBy(twenty, 0)
+	}
+	else {
+		window.scrollTo(0, 0)
+	}
 }
 </script>
