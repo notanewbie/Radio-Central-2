@@ -1,4 +1,38 @@
 <style type="text/css">
+#now {
+	background-color: black;
+	border: 10px;
+	border-color: red;
+	border-style: solid;
+	position: absolute;
+	width: 80vw;
+	height: 70vh;
+	left: 15vw;
+	top: 20vh;
+	z-index: 600;
+}
+subject {
+	color: white;
+	position: absolute;
+	left: 5vw;
+	top: 5vh;
+	font-family: Arial;
+	z-index: 5;
+}
+show {
+	position: absolute;
+	left: 0vw;
+	top: 15vh;
+	font-family: Arial;
+	z-index: 5;
+	width: 20vw;
+	height: 30vh;
+	border-color: green;
+	border-style: solid;
+	position: absolute;
+	background-image: url(foxreport.jpg);
+	background-size: cover;
+}
 #leftarrow {
 	position: fixed;
 	left: 30vw;
@@ -66,7 +100,6 @@
 }
 #th {
 	min-width: 20vw;
-	
 }
 td {
 	min-height: 12vh;
@@ -85,7 +118,7 @@ bigText1 {
 	color: white;
 	position: fixed;
 	left: 15vw;
-	top: 10vh;
+	top: 5vh;
 	font-family: Arial;
 	z-index: 5;
 }
@@ -155,6 +188,11 @@ nexttime {
 	color: white;
 	text-decoration: none;
 }
+#a3 {
+	color: white;
+	text-decoration: none;
+	padding-left: 1.8em;
+}
 #link {
 	color: white;
 	text-decoration: none;
@@ -174,7 +212,7 @@ nexttime {
 <audio id="hidden" autoplay="true" onload="report('load')" onplay="report('play')" onpause="report('pause')" onloadstart="report('buff')" onwaiting="report('buff')" onstalled="report('buff')"></audio>
 </main>
 <top>
-<bigText1><h1><a href="javascript:toggleGuide()" id="a2">Guide</a></h1></bigText1>
+<bigText1><h1><a href="javascript:toggleGuide()" id="a2">Guide</a>	<a href="javascript:toggleNow()" id="a3">On Now</a></h1></bigText1>
 </top>
 <guide style="visibility: hidden;">
 <div id="leftarrow"><a href="javascript:left()"><img src="arrow.png" id="leftarrow"></a></img></div>
@@ -710,6 +748,12 @@ nexttime {
 </tr>
 </table>
 </guide>
+<now id="hideguide">
+<subject>
+<h2>Live</h2>
+<show></show>
+</subject>
+</now>
 </body>
 </html>
 <script type="text/javascript">
@@ -1245,6 +1289,7 @@ function Tune(kall) {
 }
 main = document.getElementsByTagName("main")
 guide = document.getElementsByTagName("guide")
+now = document.getElementsByTagName("now")
 function showGuide() {
 	main[0].style.visibility = "hidden"
 	guide[0].style.visibility = "visible"
@@ -1337,5 +1382,25 @@ function right() {
 	else {
 		window.scrollTo(0, 0)
 	}
+}
+function toggleNow() {
+	justset = 0;
+	if(nowshown == "Play") {
+		showNow()
+		nowshown = "Now"
+	}
+	else if(nowshown == "Guide") {
+		showNow()
+		nowshown = "Now"
+	}
+	else if(nowshown == "Now") {
+		showPlay()
+		nowshown = "Play"
+	}
+}
+function showNow() {
+	main[0].style.visibility = "hidden"
+	guide[0].style.visibility = "hidden"
+	now[0].id="now"
 }
 </script>
