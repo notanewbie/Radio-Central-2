@@ -25,13 +25,41 @@ show {
 	top: 15vh;
 	font-family: Arial;
 	z-index: 5;
-	width: 20vw;
-	height: 30vh;
+	min-width: 20vw;
+	min-height: 30vh;
 	border-color: green;
 	border-style: solid;
-	position: absolute;
 	background-image: url(foxreport.jpg);
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+show2 {
+	position: absolute;
+	left: 25vw;
+	top: 15vh;
+	font-family: Arial;
+	z-index: 5;
+	min-width: 20vw;
+	min-height: 30vh;
+	border-color: green;
+	border-style: solid;
+	background-image: url(foxreport.jpg);
+	background-size: contain;
+    background-repeat: no-repeat;
+}
+show3 {
+	position: absolute;
+	left: 50vw;
+	top: 15vh;
+	font-family: Arial;
+	z-index: 5;
+	min-width: 20vw;
+	min-height: 30vh;
+	border-color: green;
+	border-style: solid;
+	background-image: url(foxreport.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 #leftarrow {
 	position: fixed;
@@ -751,12 +779,26 @@ nexttime {
 <now id="hideguide">
 <subject>
 <h2>Live</h2>
-<show></show>
+<a href=""><show></show></a>
+<a href=""><show2></show2></a>
+<a href=""><show3></show3></a>
 </subject>
 </now>
 </body>
 </html>
 <script type="text/javascript">
+subject = document.getElementsByTagName("now")
+
+show1 = document.getElementsByTagName("show")[0]
+show1link = subject[0].getElementsByTagName("a")[0]
+show2 = document.getElementsByTagName("show2")[0]
+show2link = subject[0].getElementsByTagName("a")[1]
+show2.style="background-image: url('cainback2.jpg')";
+show2link.href="javascript:Tune('cain')";
+show3 = document.getElementsByTagName("show3")[0]
+show3link = subject[0].getElementsByTagName("a")[2]
+show3.style="background-image: url('nrtback.jpg')";
+show3link.href="javascript:Tune('nrt1')";
 nowshown = "Play"
 
 call = "n/a"
@@ -906,24 +948,32 @@ function CheckFNT() {
 		fntdesc = "Shepard Smith recaps the news."
 		fntTime = "12:00 AM - 1:00 AM"
 		fntBack = "foxreport.jpg"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("1:00 AM", "2:00 AM") && day == 0) {
 		fntnow = "Watters' World"
 		fntdesc = "Jesse Watters talks to the man on the street."
 		fntTime = "1:00 AM - 2:00 AM"
 		fntBack = "watt.jpg"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("2:00 AM", "3:00 AM") && day == 0) {
 		fntnow = "Justice"
 		fntdesc = "Jeanine Pirro examines the news."
 		fntTime = "2:00 AM - 3:00 AM"
 		fntBack = "just.jpg"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("3:00 AM", "4:00 AM") && day == 0) {
 		fntnow = "America's News HQ"
 		fntdesc = "News coverage from the Fox News Channel."
 		fntTime = "3:00 AM - 4:00 AM"
 		fntBack = "news.jpg"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		
 		}
 	if(isBetween("4:00 AM", "5:00 AM") && day == 0) {
@@ -931,86 +981,120 @@ function CheckFNT() {
 		fntdesc = "Shepard Smith recaps the news."
 		fntTime = "4:00 AM - 5:00 AM"
 		fntBack = ""
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("5:00 AM", "5:30 AM") && day == 0) {
 		fntnow = "Bulls & Bears"
 		fntdesc = "Analysts from FBN discuss the markets."
 		fntTime = "5:00 AM - 5:30 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("5:30 AM", "6:00 AM") && day == 0) {
 		fntnow = "Cavuto on Business"
 		fntdesc = "Neil Cavuto analyzes the markets."
 		fntTime = "5:30 AM - 6:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("6:00 AM", "6:30 AM") && day == 0) {
 		fntnow = "Forbes on FOX"
 		fntdesc = "David Asman presents business news."
 		fntTime = "6:00 AM - 6:30 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("6:30 AM", "7:00 AM") && day == 0) {
 		fntnow = "Cashin' In"
 		fntdesc = "Get the most out of your money."
 		fntTime = "6:30 AM - 7:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("7:00 AM", "8:00 AM") && day == 0) {
 		fntnow = "Willis Report"
 		fntdesc = "Gerri Willis brings you money news."
 		fntTime = "7:00 AM - 8:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("8:00 AM", "9:00 AM") && day == 0) {
 		fntnow = "Kennedy"
 		fntdesc = "Sharp commentary on today's hottest issues."
 		fntTime = "8:00 AM - 9:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("9:00 AM", "12:00 PM") && day == 0) {
 		fntnow = "Best Of Kilmeade & Friends"
 		fntdesc = "The best three hours of Brian Kilmeade."
 		fntTime = "9:00 AM - 12:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("12:00 PM", "1:00 PM") && day == 0) {
 		fntnow = "Fox News Talk"
 		fntdesc = "Talk radio from Fox News."
 		fntTime = "12:00 PM - 1:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("1:00 PM", "2:00 PM") && day == 0) {
 		fntnow = "Fox News Sunday"
 		fntdesc = "Chris Wallace breaks down political news."
 		fntTime = "1:00 PM - 2:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("2:00 PM", "5:00 PM") && day == 0) {
 		fntnow = "Best of John Gibson"
 		fntdesc = "Best of the John Gibson Show."
 		fntTime = "2:00 PM - 5:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("5:00 PM", "6:00 PM") && day == 0) {
 		fntnow = "Fox News Sunday"
 		fntdesc = "Chris Wallace breaks down political news."
 		fntTime = "5:00 PM - 6:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("6:00 PM", "9:00 PM") && day == 0) {
 		fntnow = "Best of Tom Sullivan Show"
 		fntdesc = "The best three hours of Tom Sullivan."
 		fntTime = "6:00 PM - 9:00 PM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("9:00 PM", "12:00 AM") && day == 0) {
 		fntnow = "Best of Alan Colmes Show"
 		fntdesc = "The best three hours of Alan Colmes."
 		fntTime = "9:00 PM - 12:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("12:00 AM", "1:00 AM") && day == 1) {
 		fntnow = "Best of Alan Colmes Show"
 		fntdesc = "The best three hours of Alan Colmes."
 		fntTime = "12:00 AM - 2:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("1:00 AM", "2:00 AM") && day == 1) {
 		fntnow = "Tom Sullivan on Fox Business"
 		fntdesc = "Tom Sullivan on Fox Business."
 		fntTime = "1:00 AM - 2:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("2:00 AM", "3:00 AM") && day == 1) {
 		fntnow = "Lou Dobbs Tonight"
 		fntdesc = "Commentary from Lou Dobbs."
 		fntTime = "2:00 AM - 3:00 AM"
+		show1.style="background-image: url('" + fntBack + "')";
+		show1link.href="javascript:Tune('fnt')";
 		}
 	if(isBetween("3:00 AM", "4:00 AM") && day == 1) {
 		fntnow = "Greg Gutfeld Show"
