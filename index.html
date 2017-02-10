@@ -819,6 +819,7 @@ fnt = "http://65.19.131.141/foxnewsradio-foxnewsaac-ibc2"
 fntnow = "Fox News Talk"
 fntdesc = "Talk radio from Fox News."
 fntBack = "fntback.jpg"
+fntTime = "";
 
 cain = "http://oom-cmg.streamguys1.com/atl750/cain247im-sgplayer-aac"
 cainnow = "Herman Cain"
@@ -1239,7 +1240,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("12:00 AM", "1:00 AM") && day < 0) {
+	if(isBetween("12:00 AM", "1:00 AM") && day > 0) {
 		fntnow = "Special Report"
 		fntdesc = "Bret Baier sums up the news of the day."
 		fntTime = "12:00 AM - 1:00 AM"
@@ -1247,7 +1248,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("1:00 AM", "2:00 AM") && day < 0) {
+	if(isBetween("1:00 AM", "2:00 AM") && day > 0) {
 		fntnow = "Tucker Carlson Tonight"
 		fntdesc = "What the others are missing and what the media isn't telling you."
 		fntTime = "1:00 AM - 2:00 AM"
@@ -1255,7 +1256,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("2:00 AM", "3:00 AM") && day < 0) {
+	if(isBetween("2:00 AM", "3:00 AM") && day > 0) {
 		fntnow = "The Kelly File"
 		fntdesc = "The news in a nutshell."
 		fntTime = "2:00 AM - 3:00 AM"
@@ -1263,7 +1264,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("3:00 AM", "4:00 AM") && day < 0) {
+	if(isBetween("3:00 AM", "4:00 AM") && day > 0) {
 		fntnow = "Lou Dobbs Tonight"
 		fntdesc = "Commentary from Lou Dobbs."
 		fntTime = "3:00 AM - 4:00 AM"
@@ -1271,7 +1272,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("4:00 AM", "5:00 AM") && day < 0) {
+	if(isBetween("4:00 AM", "5:00 AM") && day > 0) {
 		fntnow = "Special Report"
 		fntdesc = "Bret Baier sums up the news of the day."
 		fntTime = "4:00 AM - 5:00 AM"
@@ -1279,7 +1280,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("5:00 AM", "6:00 AM") && day < 0) {
+	if(isBetween("5:00 AM", "6:00 AM") && day > 0) {
 		fntnow = "The Five"
 		fntdesc = "Five Fox News contributers give opinions on headlines."
 		fntTime = "5:00 AM - 6:00 AM"
@@ -1287,7 +1288,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("6:00 AM", "7:00 AM") && day < 0) {
+	if(isBetween("6:00 AM", "7:00 AM") && day > 0) {
 		fntnow = "Hannity"
 		fntdesc = "Stay politically informed with Sean Hannity."
 		fntTime = "6:00 AM - 7:00 AM"
@@ -1295,7 +1296,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("7:00 AM", "8:00 AM") && day < 0) {
+	if(isBetween("7:00 AM", "8:00 AM") && day > 0) {
 		fntnow = "The Kelly File"
 		fntdesc = "The news in a nutshell."
 		fntTime = "7:00 AM - 8:00 AM"
@@ -1303,7 +1304,7 @@ function CheckFNT() {
 		show1.style.backgroundImage = "url('" + fntBack + "')";
 		show1link.href="javascript:Tune('fnt')";
 		}
-	if(isBetween("8:00 AM", "9:00 AM") && day < 0) {
+	if(isBetween("8:00 AM", "9:00 AM") && day > 0) {
 		fntnow = "The O'Reilly Factor"
 		fntdesc = "Enter the no spin zone."
 		fntTime = "8:00 AM - 9:00 AM"
