@@ -92,6 +92,34 @@ show3 {
 #guide {
 	position: absolute;
 }
+#guideMon12A {
+	position: fixed;
+	left: -5vw;
+}
+#guideMon1A {
+	position: fixed;
+	left: -25vw;
+}
+#guideMon2A {
+	position: fixed;
+	left: -45vw;
+}
+#guideMon3A {
+	position: fixed;
+	left: -65vw;
+}
+#guideMon4A {
+	position: fixed;
+	left: -85vw;
+}
+#guideMon5A {
+	position: fixed;
+	left: -105vw;
+}
+#guideMon6A {
+	position: fixed;
+	left: -125vw;
+}
 #hideguide {
 	position: fixed;
 	visibility: hidden;
@@ -1650,6 +1678,12 @@ function showGuide() {
 	table = document.getElementsByTagName("table")
 	hideNow()
 	table[1].id="guide"
+	//n = hour * 38.47
+	//n = n * - 1
+	//n = n - 15
+	//table[1].style.position = "fixed"
+	//table[1].style.left = n + "vw"
+	
 	if(day == 0) {
 		location.href="#Sunday"
 	}
