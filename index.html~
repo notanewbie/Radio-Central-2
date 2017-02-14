@@ -92,6 +92,34 @@ show3 {
 #guide {
 	position: absolute;
 }
+#guideMon12A {
+	position: fixed;
+	left: -5vw;
+}
+#guideMon1A {
+	position: fixed;
+	left: -25vw;
+}
+#guideMon2A {
+	position: fixed;
+	left: -45vw;
+}
+#guideMon3A {
+	position: fixed;
+	left: -65vw;
+}
+#guideMon4A {
+	position: fixed;
+	left: -85vw;
+}
+#guideMon5A {
+	position: fixed;
+	left: -105vw;
+}
+#guideMon6A {
+	position: fixed;
+	left: -125vw;
+}
 #hideguide {
 	position: fixed;
 	visibility: hidden;
@@ -261,6 +289,8 @@ nexttime {
 <tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune("nrt1")'><img id='logo' src='nrt1logo.png'></img></td>
 <tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune("fnt")'><img id='logo' src='fntlogo.png'></img></td>
 <tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune("cain")'><img id='logo' src='cainlogo.png'></img></td>
+<tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune("levin")'><img id='logo' src='levinlogo.png'></img></td>
+<tr><td></td><td></td><td></td><td><a id='a2' href='javascript:Tune("herd")'><img id='logo' src='herdlogo.png'></img></td>
 </table>
 <table id="hideguide">
 <tr>
@@ -782,6 +812,121 @@ nexttime {
 <td id='td3' colspan='6'><a id='a2' href='javascript:Tune("cain")'>Herman Cain<br />Herman Cain brings talk radio to another level</td>
 </a></td></tr>
 </tr>
+<tr><td><a id='a2' href='javascript:Tune("levin")'><img id='logo' src='levinlogo.png'></img></td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("levin")'>Mark Levin<br />The great one.</td>
+</tr>
+<tr><td><a id='a2' href='javascript:Tune("herd")'><img id='logo' src='herdlogo.png'></img></td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'>The Herd<br />Listen to Colin Cowherd live!</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
+<td id='td3' colspan='6'><a id='a2' href='javascript:Tune("herd")'>The Herd<br />Colin Cowherd delivers the latest sports news</td>
 </table>
 </guide>
 <now id="hideguide">
@@ -824,6 +969,18 @@ fntTime = "";
 cain = "http://oom-cmg.streamguys1.com/atl750/cain247im-sgplayer-aac"
 cainnow = "Herman Cain"
 caindesc = "Listen to Herman Cain 24/7."
+
+levin = "http://14203.live.streamtheworld.com:80/MARK_LEVIN_SC"
+levinnow = "Mark Levin"
+levindesc = "Listen to Mark Levin 24/7."
+levinBack = ""
+levinTime = ""
+
+herd = "http://herd-pr.akacast.iheart.com/7/966/363324/v1/auth.akacast.akamaistream.net/herd-pr"
+herdnow = "The Herd"
+herddesc = "Listen to Colin Cowherd 24/7."
+herdBack = "herdback.png"
+herdTime = ""
 function isBetween(S, E) {
 	Start = S.split(":")
 	Start[0] = parseInt(Start[0])
@@ -1494,6 +1651,16 @@ function Tune(kall) {
 	if(call == "cain") {
 		Play("<a id='link' href='javascript:Tune(\"cain\")'>" + cainnow + "</a>", cain, "cainback2.jpg", caindesc)
 		desc = caindesc
+		("<a id='link' href='javascript:Tune(\"levin\")'>" + levinnow + "</a>", levin, "levinback.png", levindesc)
+	}
+	if(call == "levin") {
+		Play("<a id='link' href='javascript:Tune(\"levin\")'>" + levinnow + "</a>", levin, "levinback.png", levindesc)
+		desc = levindesc
+		SetNext("<a id='link' href='javascript:Tune(\"herd\")'>" + herdnow + "</a>", herd, "herdback.jpg", herddesc)
+	}
+	if(call == "herd") {
+		Play("<a id='link' href='javascript:Tune(\"herd\")'>" + herdnow + "</a>", herd, "herdback.jpg", herddesc)
+		desc = herddesc
 		SetNext("<a id='link' href='javascript:Tune(\"nrt1\")'>" + nrt1now + "</a>", nrt1, "nrtback.jpg", nrt1desc)
 	}
 }
@@ -1511,6 +1678,12 @@ function showGuide() {
 	table = document.getElementsByTagName("table")
 	hideNow()
 	table[1].id="guide"
+	//n = hour * 38.47
+	//n = n * - 1
+	//n = n - 15
+	//table[1].style.position = "fixed"
+	//table[1].style.left = n + "vw"
+	
 	if(day == 0) {
 		location.href="#Sunday"
 	}

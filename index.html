@@ -1678,11 +1678,12 @@ function showGuide() {
 	table = document.getElementsByTagName("table")
 	hideNow()
 	table[1].id="guide"
-	//n = hour * 38.47
-	//n = n * - 1
-	//n = n - 15
-	//table[1].style.position = "fixed"
-	//table[1].style.left = n + "vw"
+	
+	n = hour * 38.47
+	n = n * - 1
+	n = n - 15
+	table[1].style.position = "fixed"
+	table[1].style.left = n + "vw"
 	
 	if(day == 0) {
 		location.href="#Sunday"
@@ -1759,9 +1760,12 @@ function addShow(name, length) {
 function left() {
 	pageXOffset = window.pageXOffset;
 	innerWidth = window.innerWidth;
-	twenty = innerWidth * .4;
-	if(pageXOffset > twenty) {
-		window.scrollBy(twenty * -1, 0)
+	twenty = innerWidth * .2;
+	Lef = table[1].style.left;
+	Lef = Lef.split("vw")
+	Lef = parseInt(Lef) + 20.1
+	if(parseInt(Lef) < 15) {
+		table[1].style.left = Lef + "vw"
 	}
 	else {
 		window.scrollTo(0, 0)
@@ -1770,9 +1774,11 @@ function left() {
 function right() {
 	pageXOffset = window.pageXOffset;
 	innerWidth = window.innerWidth;
-	twenty = innerWidth * .4;
-	if(pageXOffset > twenty) {
-		window.scrollBy(twenty, 0)
+	Lef = table[1].style.left;
+	Lef = Lef.split("vw")
+	Lef = parseInt(Lef) - 20.1
+	if(parseInt(Lef) < 15) {
+		table[1].style.left = Lef + "vw"
 	}
 	else {
 		window.scrollTo(0, 0)
